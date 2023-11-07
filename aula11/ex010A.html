@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro?</title>
+    <style>
+        body{
+            font-size: 14pt;
+        }
+        input, span{
+            margin-left: 5px;
+            height: 26px;
+            font-size: 20px;
+        }
+        .btn{
+            background-color: rgb(3, 155, 155);
+            color: white;
+        }
+        strong{
+            background-color: rgb(231, 231, 2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Estrangeiro ou não?</h1>
+    <span>Onde vive?</span><input type="text" name="txtpais" id="txtpais">
+    <input class="btn" type="button" value="É estrangeiro?" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var pais = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            res.innerHTML=`<p>Você vive em: <strong>${pais.value}</strong></p>`
+            
+            if (pais.value == 'BRASIL' || pais.value == 'brasil' || pais.value == 'Brasil'){
+                res.innerHTML+=`<p>Você é <u>brasileiro</u>.</p>`
+            }else{
+                res.innerHTML+=`<p>Você é <em>estrangeiro</em>.</p>`
+            }
+            
+        }
+    </script>
+</body>
+</html>
+
+<!-- var pais='França'
+console.log(`Vivendo em ${pais}`)
+if (pais == 'Brasil')
+    console.log('Você é Brasileiro!')
+else{
+    console.log('Você é Estrangeiro!')
+} -->
