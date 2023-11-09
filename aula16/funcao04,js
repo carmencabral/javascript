@@ -1,0 +1,34 @@
+//FATORIAL
+
+function fatorial(n){
+    let fat = 1
+    let strr = ""
+    strr = strr + `${n}`
+    for (let i = n; i > 1; i--) {
+         fat *= (i-1)
+         strr = strr + ` x ${i-1}`
+    }
+    strr = strr + ` = ${fat*n}`
+    return strr
+}
+
+let n = 5
+console.log(`O fatorial de ${n} é ${fatorial(n)}`)
+
+
+/*
+function fatorial(n){
+    let r=1
+    let strr = ""
+    strr = strr + `${n}`
+    for (let i = n-1; i != 0; i--) {
+         r *= i
+         strr = strr + ` x ${i}`
+    }
+    strr = strr + ` = ${r*n}`
+    return strr
+}
+
+let n = 5
+console.log(`O fatorial de ${n} é ${fatorial(n)}`)
+*/
