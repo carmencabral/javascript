@@ -23,14 +23,17 @@ function Adicionar(){
         let tam = fselNumeros.options.length
         selNumeros.text = `Valor ${num} adicionado.`
         fselNumeros.add(selNumeros, fselNumeros.options[tam-1])
-        Finalizar()
+        res.innerHTML = ""
+        // Finalizar()
     }
+    txtNum.value = ''
+    txtNum.focus()
 }
 
 function isList(strnum){
     let res = false
     for (let i = 0; i < fselNumeros.options.length-1; i++) {
-        if (strnum == String(fselNumeros.options[i].text)) {
+        if (res == true || strnum == String(fselNumeros.options[i].text)) {
             res = true
         } else {
             res = false
